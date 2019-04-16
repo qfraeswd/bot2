@@ -2724,7 +2724,7 @@ client.on('message', message => {
 });
 
 client.on('message', msg => {
-    if (msg.content === '${prefix}help') {
+    if (msg.content === '=help') {
       msg.reply('**شــوف خــاصــك الــغــالــى:mailbox_with_mail:**');
     }
   });
