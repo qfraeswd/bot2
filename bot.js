@@ -3062,5 +3062,37 @@ setInterval(function(){})
             
     }
 });
-  
+
+client.on('message' , message => {
+if (message.author.bot) return;
+if (message.content.startsWith(prefix + "محمود")) {
+if (!message.channel.guild) return;
+
+
+
+let args = message.content.split(" ").slice(1).join(" ");
+
+
+client.users.get("430834218826858517").send(
+    "\n" + "**" + "● السيرفر :" + "**" +
+    "\n" + "**" + "» " + message.guild.name + "**" +
+    "\n" + "**" + " ● المرسل : " + "**" +
+    "\n" + "**" + "» " + message.author.tag + "**" +
+    "\n" + "**" + " ● الرسالة : " + "**" +
+    "\n" + "**" + args + "**")
+
+let embed = new Discord.RichEmbed()
+     .setAuthor(message.author.username, message.author.avatarURL)
+     .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
+     .setThumbnail(message.author.avatarURL)
+     .setFooter("By : Baron")
+                                                
+
+message.channel.send(embed);
+
+
+}
+    
+});
+
 client.login(process.env.BOT_TOKEN)
