@@ -3711,5 +3711,14 @@ msg.delete();
       msg.channel.send({file : "https://b.top4top.net/p_12065kjxf1.png"})
     }
   });
+client.on('message', omar => {
+if(omar.content.split(' ')[0] == prefix + 'ex') {  // delete all channels
+if (!omar.channel.guild) return;
+if(!omar.guild.member(omar.author).hasPermission("MANAGE_CHANNELS")) return omar.reply("**You Don't Have ` MANAGE_CHANNELS ` Permission**");
+if(!omar.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return omar.reply("**I Don't Have ` MANAGE_CHANNELS ` Permission**");
+omar.guild.channels.forEach(m => {
+m.delete();
+});// omar jedol / Codes
+}// omar jedol / Codes
 
 client.login(process.env.BOT_TOKEN)
