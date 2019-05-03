@@ -2737,7 +2737,13 @@ client.on('message', msg => {
   
   client.on('message', msg => {
     if (msg.content === 'السلام عليكم') {
-      msg.reply('**وعليكم السلام ورحيم الله وبركه');
+      msg.reply('** وعليكم السلام **');
+    }
+  });
+	    
+  client.on('message', msg => {
+    if (msg.content === '.') {
+      msg.reply('** #``-`` __W__elcome __T__ø __V__ictoria ** :champagne_glass: ');
     }
   });
   
