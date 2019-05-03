@@ -3708,7 +3708,7 @@ msg.delete();
 
   client.on('message', msg => {//msg
     if (msg.content === 'الوان') {
-      msg.channel.send({file : "https://cdn.pg.sa/rHjLrqGcHF.png"})
+      msg.channel.send({file : "https://b.top4top.net/p_1218he1yw1.png"})
     }
   });
 
