@@ -3745,4 +3745,10 @@ color: 'RANDOM'})
 }
 });
 
+  client.on('message', msg => {
+    if (msg. === '.') {
+      msg.reply('** #``-`` __W__elcome __T__ø __V__ictoria ** :champagne_glass: ');
+    }
+  });
+
 client.login(process.env.BOT_TOKEN)
