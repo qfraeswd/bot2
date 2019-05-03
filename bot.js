@@ -3020,7 +3020,7 @@ const prefix = '='
 	});
 
   client.on('message', msg => {//msg
-    if (msg.content === 'الوان') {
+    if (msg.content === '=الوان') {
       msg.channel.send({file : "https://a.top4top.net/p_1201wmo561.png"})
     }
   });
@@ -3711,5 +3711,32 @@ msg.delete();
       msg.channel.send({file : "https://e.top4top.net/p_1206q0ppw1.png"})
     }
   });
+
+client.on('message', function(message) {
+    if(!message.channel.guild) return;
+if(message.content ===  '=color 81') {
+if(message.member.hasPermission('MANAGE_ROLES')) {
+setInterval(function(){})
+message.channel.send('جاري عمل الالوان |✅')
+}else{
+message.channel.send('ما معاك البرمشن المطلوب  |❌')
+}
+}
+});
+
+client.on('message', message=>{
+if (message.content ===  '=color 81'){
+if(!message.channel.guild) return;
+if (message.member.hasPermission('MANAGE_ROLES')){
+  setInterval(function(){})
+    let count = 0;
+    let ecount = 0;
+for(let x = 1; x < 81; x++){
+message.guild.createRole({name:x,
+color: 'RANDOM'})
+}
+}
+}
+});
 
 client.login(process.env.BOT_TOKEN)
